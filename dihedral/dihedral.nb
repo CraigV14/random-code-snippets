@@ -1,0 +1,123 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3486,        115]
+NotebookOptionsPosition[      2913,         93]
+NotebookOutlinePosition[      3257,        108]
+CellTagsIndexPosition[      3214,        105]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Calculate the dihedral angle, \[Phi]", "Subsection",
+ CellChangeTimes->{{3.706214380931903*^9, 
+  3.7062143884164925`*^9}},ExpressionUUID->"f7e62715-80c3-44a3-ac6c-\
+17608f24fc1c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{
+   "b1", ",", "b2", ",", "b3", ",", "n1", ",", "n2", ",", "a", ",", "b", ",", 
+    "c", ",", "d", ",", "\[Phi]"}], "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Input", " ", "points", " ", "A"}], ",", " ", "B", ",", " ", 
+    RowBox[{"C", " ", "and", " ", "D"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5", ",", "6"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "6", ",", "7"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{"8", ",", "9", ",", "0"}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b1", " ", "=", " ", 
+   RowBox[{"b", "-", "a"}]}], ";", " ", 
+  RowBox[{"b2", " ", "=", " ", 
+   RowBox[{"c", "-", "b"}]}], ";", " ", 
+  RowBox[{"b3", " ", "=", " ", 
+   RowBox[{"d", "-", "c"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n1", " ", "=", " ", 
+   RowBox[{"Normalize", "[", 
+    RowBox[{"Cross", "[", 
+     RowBox[{"b1", ",", "b2"}], "]"}], "]"}]}], ";", 
+  RowBox[{"n2", " ", "=", " ", 
+   RowBox[{"Normalize", "[", 
+    RowBox[{"Cross", "[", 
+     RowBox[{"b2", ",", "b3"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\[Phi]", " ", "=", " ", 
+  RowBox[{"ArcTan", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Cross", "[", 
+      RowBox[{"n1", ",", "n2"}], "]"}], ".", 
+     RowBox[{"Normalize", "[", "b2", "]"}]}], ",", 
+    RowBox[{"n1", ".", "n2"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7062143965391717`*^9, 
+  3.706214551219077*^9}},ExpressionUUID->"34651c97-6206-43c7-a398-\
+8fd6ae71c1ae"],
+
+Cell[BoxData["Indeterminate"], "Output",
+ CellChangeTimes->{
+  3.706214551645232*^9},ExpressionUUID->"982044ec-1a2d-42be-bee0-\
+c12071493b60"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1278, 988},
+WindowMargins->{{Automatic, 56}, {Automatic, 27}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 186, 3, 49, "Subsection", "ExpressionUUID" -> \
+"f7e62715-80c3-44a3-ac6c-17608f24fc1c"],
+Cell[CellGroupData[{
+Cell[791, 29, 1949, 55, 202, "Input", "ExpressionUUID" -> \
+"34651c97-6206-43c7-a398-8fd6ae71c1ae"],
+Cell[2743, 86, 142, 3, 63, "Output", "ExpressionUUID" -> \
+"982044ec-1a2d-42be-bee0-c12071493b60"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
